@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>QR-Code Generator</title>
+    <link rel="stylesheet" href="https://scorchchamp.github.io/style.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.4.4/build/qrcode.min.js"></script>
+</head>
+
+<body>
+    <h1>QR Code Generator</h1>
+    <div class="page">
+        <form id="qr-form">
+            <div class="form-row">
+                <label for="text">Text:</label>
+                <input type="text" id="text" name="text" value="https://ScorchChamp.github.io/">
+            </div>
+            <div class="form-row">
+                <label for="error-correction-level">Error Correction Level:</label>
+                <select id="error-correction-level" name="errorCorrectionLevel">
+                    <option value="L">L (Low): 7%</option>
+                    <option value="M" selected="selected">M (Medium): 15%</option>
+                    <option value="Q">Q (Quartile): 25%</option>
+                    <option value="H">H (High): 30%</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <label for="dark-color">Dark Color:</label>
+                <input type="color" id="dark-color" name="darkColor">
+            </div>
+            <div class="form-row">
+                <label for="light-color">Light Color:</label>
+                <input type="color" id="light-color" name="lightColor" value="#ffffff">
+            </div>
+            <div class="form-row">
+                <label for="image">Center Image:<br><i>Only works with Q or H!</i></label>
+                <input type="file" id="image" name="image" accept="image/*">
+            </div>
+            <div class="qr-code">
+                <a href="" id="qr-code-download-button" download="QR-Code_Scorchamp.github.io.png">
+                    <img id="qr-code" />
+                </a>
+                <div class="qr-code-download">Click on the image to download!</div>
+            </div>
+        </form>
+        <script src="./app.js"></script>
+    </div>
+</body>
+
+</html>
