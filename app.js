@@ -1,3 +1,5 @@
+
+window.addEventListener("load", function () {
 const qrCodeElement = document.getElementById('qr-code');
 const textElement = document.getElementById('text');
 const errorCorrectionLevel = document.getElementById('error-correction-level');
@@ -64,3 +66,4 @@ function updateQRCode() {
 }
 
 updateQRCode();
+});
